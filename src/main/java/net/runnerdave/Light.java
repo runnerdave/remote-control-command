@@ -12,6 +12,14 @@ public class Light {
 
     private String location;
 
+    @Override
+    public String toString() {
+        return "Light{" +
+                "on=" + on +
+                ", location='" + location + '\'' +
+                '}';
+    }
+
     public Light() {
     }
 

@@ -20,17 +20,17 @@ public class CeilingFan {
 
     public void setHigh() {
         this.speed = HIGH;
-        printState();
+        System.out.println("ceiling fan set to high");
     }
 
     public void setMedium() {
         this.speed = MEDIUM;
-        printState();
+        System.out.println("ceiling fan set to medium");
     }
 
     public void setLow() {
         this.speed = LOW;
-        printState();
+        System.out.println("ceiling fan set to low");
     }
 
     public String getLocation() {
@@ -45,20 +45,25 @@ public class CeilingFan {
     public void on() {
         this.on = true;
         this.setLow();
-        printState();
+        System.out.println("ceiling fan on");
     }
 
     public void off() {
         this.on = false;
         this.speed = OFF;
-        printState();
+        System.out.println("ceiling fan off");
     }
 
     public boolean isOn() {
         return on;
     }
 
-    private void printState () {
-        System.out.println(location + " speed set to " + speed);
+    @Override
+    public String toString() {
+        return "CeilingFan{" +
+                "location='" + location + '\'' +
+                ", on=" + on +
+                ", speed=" + speed +
+                '}';
     }
 }

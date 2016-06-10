@@ -20,10 +20,12 @@ public class Stereo {
 
     void on() {
         this.isOn = true;
+        System.out.println("stereo on");
     }
 
     void off() {
         isOn = false;
+        System.out.println("stereo off");
     }
 
     void setCD() {
@@ -40,5 +42,14 @@ public class Stereo {
 
     void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    @Override
+    public String toString() {
+        return "Stereo{" +
+                "isOn=" + isOn +
+                ", volume=" + volume +
+                ", location='" + location + '\'' +
+                '}';
     }
 }
